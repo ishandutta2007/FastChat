@@ -7,17 +7,36 @@ import os
 
 REPO_PATH = os.path.dirname(os.path.dirname(__file__))
 
+# Survey Link URL (to be removed) #00729c
+SURVEY_LINK = """<div style='text-align: left; margin: 20px 0;'>
+    <div style='display: inline-block; border: 2px solid #00729c; padding: 20px; padding-bottom: 10px; padding-top: 10px; border-radius: 5px;'>
+        <span style='color: #00729c; font-weight: bold;'>New Launch! Copilot Arena: <a href='https://marketplace.visualstudio.com/items?itemName=copilot-arena.copilot-arena' style='color: #00729c; text-decoration: underline;'>VS Code Extension</a> to compare Top LLMs</span>
+    </div>
+</div>"""
+# SURVEY_LINK = ""
+
 ##### For the gradio web server
 SERVER_ERROR_MSG = (
     "**NETWORK ERROR DUE TO HIGH TRAFFIC. PLEASE REGENERATE OR REFRESH THIS PAGE.**"
 )
+TEXT_MODERATION_MSG = (
+    "$MODERATION$ YOUR TEXT VIOLATES OUR CONTENT MODERATION GUIDELINES."
+)
+IMAGE_MODERATION_MSG = (
+    "$MODERATION$ YOUR IMAGE VIOLATES OUR CONTENT MODERATION GUIDELINES."
+)
 MODERATION_MSG = "$MODERATION$ YOUR INPUT VIOLATES OUR CONTENT MODERATION GUIDELINES."
 CONVERSATION_LIMIT_MSG = "YOU HAVE REACHED THE CONVERSATION LENGTH LIMIT. PLEASE CLEAR HISTORY AND START A NEW CONVERSATION."
 INACTIVE_MSG = "THIS SESSION HAS BEEN INACTIVE FOR TOO LONG. PLEASE REFRESH THIS PAGE."
-SLOW_MODEL_MSG = "⚠️  Both models will show the responses all at once. Please stay patient as it may take over 30 seconds."
-RATE_LIMIT_MSG = "**RATE LIMIT OF THIS MODEL IS REACHED. PLEASE COME BACK LATER OR TRY OTHER MODELS.**"
+SLOW_MODEL_MSG = (
+    "⚠️  Models are thinking. Please stay patient as it may take over a minute."
+)
+RATE_LIMIT_MSG = "**RATE LIMIT OF THIS MODEL IS REACHED. PLEASE COME BACK LATER OR USE <span style='color: red; font-weight: bold;'>[BATTLE MODE](https://lmarena.ai)</span> (the 1st tab).**"
 # Maximum input length
 INPUT_CHAR_LEN_LIMIT = int(os.getenv("FASTCHAT_INPUT_CHAR_LEN_LIMIT", 12000))
+BLIND_MODE_INPUT_CHAR_LEN_LIMIT = int(
+    os.getenv("FASTCHAT_BLIND_MODE_INPUT_CHAR_LEN_LIMIT", 30000)
+)
 # Maximum conversation turns
 CONVERSATION_TURN_LIMIT = 50
 # Session expiration time
