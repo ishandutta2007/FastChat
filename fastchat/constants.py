@@ -15,10 +15,10 @@ REPO_PATH = os.path.dirname(os.path.dirname(__file__))
 # </div>"""
 # SURVEY_LINK = ""
 
-COLOR = "#008B8B"
-SURVEY_LINK = f"""<div style='text-align: left; margin: 20px 0;'>
-    <div style='display: inline-block; border: 2px solid {COLOR}; padding: 20px; padding-bottom: 10px; padding-top: 10px; border-radius: 5px; background-color: #ECFAE5'>
-        <span style='color: {COLOR}; font-weight: bold;'>New Arena UI at <a href='https://beta.lmarena.ai/'>BETA.lmarena.ai</a>! Check it out & give feedback!</a></span>
+COLOR = "#F11414"
+SURVEY_LINK = f"""<div style='text-align: center; margin: 20px 0;'>
+    <div style='display: block; width: 100%; border: 2px solid {COLOR}; padding: 20px; padding-bottom: 10px; padding-top: 10px; border-radius: 5px; background-color: #FE9393'>
+        <span style='font-weight: bold; font-size: 20px; color: #050505; '>🔔 New Arena UI at <a href='https://lmarena.ai/leaderboard?utm_campaign=hf_banner' target="_blank" rel="noopener noreferrer" style="color: #233F9C; text-decoration: underline;">lmarena.ai/leaderboard</a>! Check it out and give feedback!</a></span>
     </div>
 </div>"""
 
